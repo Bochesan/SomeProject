@@ -1,0 +1,69 @@
+.footer
+    padding-top: rel-size(40px);
+    padding-bottom: rel-size(20px);
+    background: #212933;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__logo
+        width: rel-size(150px);
+
+    &__logo-link
+
+        img
+            width: rel-size(100px);
+            height: auto;
+
+    &__content
+        flex: 1;
+
+    &__menu
+        display: flex;
+        justify-content: center;
+        margin: 0 0 rel-size(40px) 0;
+        padding: 0;
+
+    &__menu-item
+        margin: 0 rel-size(5px);
+        padding: 0;
+
+        &:before
+            display: none;
+
+    &__menu-link
+        text-decoration: none;
+        font-size: rel-size(12px);
+        font-weight: 500;
+        color: white;
+        padding: 0 rel-size(2px);
+
+        &.fdInUnderline:before
+            height: 1px;
+
+    &__copyright
+        text-align: center;
+        font-size: rel-size(12px);
+        font-weight: 500;
+        color: white;
+
+    &__info
+        width: rel-size(150px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        a
+            padding: 0 rel-size(1px);
+            white-space: nowrap;
+            font-family: ff-Roboto;
+            font-size: rel-size(12px);
+            text-decoration: none;
+            color: white;
+            margin-bottom: rel-size(15px);
+
+            &:last-child
+                margin-bottom: 0;
+
+            &.fdInUnderline:before
+                height: 1px;

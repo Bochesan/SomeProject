@@ -1,0 +1,20 @@
+.fadeIn
+    transition: 1s ease-out opacity, 1s ease-out transform;
+    opacity: 0;
+    transform: translateY(50px);
+    +below(425px)
+        opacity: 1;
+        transform: translateY(0px);
+    &--delay05
+        transition: 1s .5s ease-out opacity, 1s .5s ease-out transform;
+    &--delay1
+        transition: 1s 1s ease-out opacity, 1s .5s ease-out transform;
+    &--delay15
+        transition: 1s 1.5s ease-out opacity, 1s .5s ease-out transform;
+    &--water
+        transform: translate(-40px, 40px);
+    &--show
+        opacity: 1;
+        transform: translateY(0px);
+        &.fadeIn--water
+            transform: translate(0px, 0px);

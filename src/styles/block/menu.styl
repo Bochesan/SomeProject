@@ -1,0 +1,44 @@
+.menu
+
+    &__container
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+    &__item
+        margin: 0;
+        padding: 0;
+        margin-right: rel-size(60px);
+
+        &:last-child
+            margin-right: 0;
+
+        &:before
+            display: none;
+
+    &__link
+        color: white;
+        display: inline-block;
+        padding: 10px;
+        font-size: rel-size(12px);
+
+.fdInUnderline
+    display: inline-block;
+    position: relative;
+
+    &:before
+        content: ' ';
+        width: 0;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        opacity: 0;
+        height: 3px;
+        background: white;
+        transition: width 0.3s, left 0.3s, opacity 0.3s;
+
+    &:hover:before
+        width: 100%;
+        opacity: 1;
+        left: 0;
