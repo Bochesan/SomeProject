@@ -1,5 +1,7 @@
 .button
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    position: relative;
     border-radius: 50px;
     padding: rel-size(15px) rel-size(65px);
     font-size: rel-size(17px);
@@ -8,10 +10,27 @@
     letter-spacing: 1px;
     color: white;
     text-transform: uppercase;
-    transition: background 0.3s;
+    transition: background 0.3s, border 0.3s;
 
     &--blue
         background: #7ca5d9;
 
         &:hover
             background: darken(#7ca5d9, 10%)
+
+    &--transparent
+        background: transparent;
+        border: 1px solid white;
+
+        &:hover
+            background: rgba(255,255,255,0.2);
+
+    &--download
+        padding: rel-size(15px) rel-size(20px);
+
+        i
+            display: block;
+            margin-right: rel-size(15px);
+            width: rel-size(18px);
+            height: @width;
+            background: url('/assets/media/images/downloadIcon.png') center center no-repeat;

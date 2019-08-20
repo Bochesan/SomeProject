@@ -1,0 +1,114 @@
+.wwdSection
+    position: relative;
+
+    &__title
+        position: absolute;
+        top: rel-size(100px);
+        left: 4%;
+        z-index: 20;
+        color: #969696;
+        font-size: rel-size(37px);
+        line-height: rel-size(37px);
+        font-weight: 300;
+
+        &--bolder
+            font-family: ff-Roboto;
+            font-weight: 700;
+            color: #000;
+
+    &__title-inner
+        position: relative;
+
+        &:before
+            content: attr(data-name);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-56%,-75%);
+            opacity: 0.1;
+            font-size: rel-size(66px);
+            line-height: rel-size(66px);
+            white-space: nowrap;
+            font-weight: 900;
+            word-spacing: 5px;
+
+    &__slide
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: rel-size(220px) 0 rel-size(220px) 4%;
+        overflow: hidden;
+
+        &.swiper-slide-active
+
+            .wwdSection__slide-title
+                opacity: 0;
+                animation: returnLeft 2s 2s forwards;
+
+            .wwdSection__slide-text
+                opacity: 0;
+                animation: returnLeft 2s 2.3s forwards;
+
+            .wwdSection__slide-image
+                opacity: 0;
+                animation: returnRight 2s 2.5s forwards;
+
+    &__slide-content
+        max-width: rel-size(400px);
+
+    &__slide-title
+        font-size: rel-size(18px);
+        margin-bottom: rel-size(25px);
+        animation: slideLeft 2s forwards;
+
+    &__slide-text
+        font-size: rel-size(16px);
+        margin-bottom: rel-size(15px);
+        color: #595959;
+        max-width: rel-size(400px);
+        animation: slideLeft 2s 0.3s forwards;
+
+    &__slide-image
+        align-self: flex-end;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        animation: slideRight 2s 0.5s forwards;
+
+@keyframes slideLeft
+    0%
+        opacity: 1;
+        transform: translate(0%,0%);
+
+    100%
+        opacity: 0;
+        transform: translate(-100%,0%);
+
+@keyframes slideRight
+    0%
+        opacity: 1;
+        transform: translate(0%,0%);
+
+    100%
+        opacity: 0;
+        transform: translate(100%,0%);
+
+@keyframes returnLeft
+    0%
+        opacity: 0;
+        transform: translate(-100%,0%);
+
+    100%
+        opacity: 1;
+        transform: translate(0%,0%);
+
+@keyframes returnRight
+    0%
+        opacity: 0;
+        transform: translate(100%,0%);
+
+    100%
+        opacity: 1;
+        transform: translate(0%,0%);

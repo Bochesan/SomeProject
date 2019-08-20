@@ -1,0 +1,46 @@
+.downloadSection
+    position: relative;
+    background: #9577a8;
+    padding-top: rel-size(45px);
+    padding-bottom: rel-size(40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__anchor
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        font-size: 0;
+
+    &__anchor-arrow
+        animation: scrollArrow 1.75s infinite;
+
+    &__title
+        font-size: rel-size(25px);
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 5px;
+        margin-bottom: rel-size(30px);
+
+    &__text
+        font-size: rel-size(17px);
+        font-weight: 600;
+        color: white;
+        margin-bottom: rel-size(35px);
+
+@keyframes scrollArrow
+    0%
+    100%
+        opacity: 1;
+        transform: translate(0%,-10%);
+
+    90%
+        opacity: 0;
+        transform: translate(0%,20%);
+
+    91%
+        opacity: 0;
+        transform: translate(0%,-10%);
