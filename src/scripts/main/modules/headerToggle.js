@@ -3,10 +3,10 @@ var main = document.querySelector("main");
 
 var headerToggle = new Headroom(header,{
             onTop: function() {
-                main.style.paddingTop = "0px";
+                //main.style.paddingTop = "0px";
             },
             onNotTop: function() {
-                main.style.paddingTop = $(header).css('height');
+                //main.style.paddingTop = $(header).css('height');
             }
         });
-//headerToggle.init();
+headerToggle.init();
