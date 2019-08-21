@@ -1,0 +1,54 @@
+// Burger
+lines-color = #E1E1E1;
+width-menu = 24px;
+height-menu = 14px;
+lines-height = height-menu / 8;
+
+.menu-button
+    display: none;
+    cursor: pointer;
+
+    +below(768px)
+        display: block;
+
+    &__inner
+        position: relative;
+        width: width-menu;
+        height: height-menu;
+
+    &__line
+        width: 100%;
+        height: lines-height;
+        background: lines-color;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        transition: top 0.3s 0.4s, bottom 0.3s 0.4s, transform 0.3s, opacity 0.1s 0.3s;
+
+        &--1
+            top: 0;
+            transform: translate(0,-50%);
+
+        &--2
+            top: 50%;
+            transform: translate(0,-50%);
+
+        &--3
+            top: 100%;
+            transform: translate(0,-50%);
+
+    &.opened
+
+        & .menu-button__line
+            transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s, opacity 0.1s 0.3s;
+
+            &--1
+                top: 50%;
+                transform: rotate(45deg);
+
+            &--2
+                opacity: 0;
+
+            &--3
+                top: 50%;
+                transform: rotate(-45deg);

@@ -24,12 +24,19 @@
         color: white;
         letter-spacing: 5px;
         margin-bottom: rel-size(30px);
+        text-align: center;
+
+        +below(560px)
+            font-size: rel-size(20px);
 
     &__text
         font-size: rel-size(17px);
         font-weight: 600;
         color: white;
         margin-bottom: rel-size(35px);
+
+        +below(560px)
+            font-size: rel-size(15px);
 
 @keyframes scrollArrow
     0%

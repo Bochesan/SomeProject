@@ -22,8 +22,19 @@
         display: flex;
         justify-content: space-between;
 
+        +below(620px)
+            flex-wrap: wrap;
+
     &__info
         width: rel-size(310px);
+        margin: 0 rel-size(10px);
+
+        +below(620px)
+            width: 100%;
+            margin: 0 0 rel-size(60px);
+
+            &:last-child
+                margin: 0;
 
     &__info-title
         text-align: center;

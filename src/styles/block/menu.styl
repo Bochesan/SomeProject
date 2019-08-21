@@ -1,15 +1,38 @@
 .menu
 
+    +below(768px)
+         position: absolute;
+         top: 100%;
+         left: 0;
+         z-index: -1;
+         width: 100%;
+         opacity: 0.5;
+         transform: translate(0,-100%);
+         opacity: 0;
+         transition: transform 0.5s, opacity 0.15s 0s;
+         padding: 0 2%;
+
+        &.opened
+            transition: transform 0.5s, opacity 0.5s 0.5s;
+            opacity: 1;
+            transform: translate(0,0%);
+
     &__container
         display: flex;
         align-items: center;
         margin: 0;
         padding: 0;
 
+        +below(460px)
+            justify-content: space-around;
+
     &__item
         margin: 0;
         padding: 0;
         margin-right: rel-size(60px);
+
+        +below(460px)
+            margin: 0 rel-size(10px);
 
         &:last-child
             margin-right: 0;

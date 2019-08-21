@@ -4,21 +4,37 @@
     left: 0;
     z-index: 1000;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     transition: transform 0.5s, background 0.5s;
 
+    &__content
+        position: relative;
+        padding: rel-size(15px) 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.5s, background 0.5s;
+
     &.headroom--not-top
-        background: rgba(0,0,0,0.5);
+
+        +below(768px)
+
+            .menu
+                background: rgba(0,0,0,0.6);
+
+        .header__content
+            background: rgba(0,0,0,0.8);
 
         &.headroom--unpinned
             transform: translate(0,-100%);
 
+            & .opened.menu
+                transform: translate(0,-100%);
+
         &.headroom--pinned
             transform: translate(0,0);
+
+            & .opened.menu
+                transform: translate(0,0%);
 
     &__logo-link
 

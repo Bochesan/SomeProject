@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,28 +11,37 @@
 </head>
 <body>
     <div class="outer">
-        <header class="header wrapper">
-            <div class="header__logo">
-                <a href="/" class="header__logo-link">
-                    <img src="/assets/media/images/logo.png" alt="">
-                </a>
+        <header class="header">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img src="/assets/media/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div id='menu-button' class="menu-button">
+                    <div class="menu-button__inner">
+                        <div class="menu-button__line menu-button__line--1"></div>
+                        <div class="menu-button__line menu-button__line--2"></div>
+                        <div class="menu-button__line menu-button__line--3"></div>
+                    </div>
+                </div>
+                <nav class="menu mainMenu">
+                    <ul class="menu__container">
+                        <li class="menu__item"><a href="#welcome" class="menu__link fdInUnderline">WELCOME</a></li>
+                        <li class="menu__item"><a href="#hiw" class="menu__link fdInUnderline">HOW IT WORKS</a></li>
+                        <li class="menu__item"><a href="#contacts" class="menu__link fdInUnderline">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="menu">
-                <ul class="menu__container">
-                    <li class="menu__item"><a href="#welcome" class="menu__link fdInUnderline">WELCOME</a></li>
-                    <li class="menu__item"><a href="#hiw" class="menu__link fdInUnderline">HOW IT WORKS</a></li>
-                    <li class="menu__item"><a href="#contacts" class="menu__link fdInUnderline">CONTACT</a></li>
-                </ul>
-            </nav>
         </header>
         <main class="content">
 
-            <section class="homeSection" id="welcome">
+            <div class="homeSection" id="welcome">
                 <div class="homeSection__title">DO YOU HAVE A <br>LARGE FOLLOWING?</div>
                 <a href="#" class="homeSection__button button button--blue">LEARN MORE</a>
-            </section>
+            </div>
 
-            <section class="downloadSection wrapper" id="downloadSection">
+            <div class="downloadSection wrapper" id="downloadSection">
                 <a href="#downloadSection" class="downloadSection__anchor">
                     <svg width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M49.8677 19.7006C57.6789 10.4455 60.8379 -0.434934 72.5 0.0134098C84.1621 -0.434934 88.0883 10.4455 95.8995 19.7007C106.458 34.4672 117.362 38.3486 145 40L72.5 39.9804H0C27.6376 38.329 39.3094 34.4671 49.8677 19.7006Z" fill="#9577A8"/>
@@ -42,9 +51,9 @@
                 <div class="downloadSection__title">DO YOU WANT START NOW?</div>
                 <div class="downloadSection__text">Fast downloads can help you!</div>
                 <a href="#" class="downloadSection__download button button--download button--transparent" download><i></i>DOWNLOAD NOW</a>
-            </section>
+            </div>
 
-            <section class="wwdSection">
+            <div class="wwdSection">
                 <div class="wwdSection__title">
                     <div class="wwdSection__title-inner shadowTitle" data-name='WHAT We Do?'>
                         <span class="wwdSection__title--bolder">WHAT</span>
@@ -79,9 +88,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="serviceSection wrapper" id="hiw">
+            <div class="serviceSection wrapper" id="hiw">
                 <a href="#" class="serviceSection__link">
                     <div class="serviceSection__link-image">
                         <img src="/assets/media/images/s-ic1.png" alt="">
@@ -106,34 +115,36 @@
                     </div>
                     <div class="serviceSection__link-title">We&nbsp;send your <br> monthly earnings</div>
                 </a>
-            </section>
+            </div>
 
-            <section class="joinSection">
+            <div class="joinSection">
                 <div class="joinSection__image wrapper">
                     <img src="/assets/media/images/mockup.png" alt="">
                 </div>
                 <div class="joinSection__content wrapper">
                     <div class="joinSection__button-row">
-                        <a href="#" class="button button--join">JOIN US !</a>
+                        <span class="scrollAnimate" data-animation='bounceIn'>
+                            <a href="#" class="button button--join">JOIN US !</a>
+                        </span>
                     </div>
                     <div class="joinSection__content-row">
-                        <div class="joinSection__info">
+                        <div class="joinSection__info scrollAnimate" data-animation='bounceIn'>
                             <div class="joinSection__info-title">MORE THAN 1000 USERS</div>
                             <div class="joinSection__info-text">Already with us!</div>
                         </div>
-                        <div class="joinSection__info">
+                        <div class="joinSection__info scrollAnimate" data-animation='bounceIn'>
                             <div class="joinSection__info-title">СONVENIENT SERVICE</div>
                             <div class="joinSection__info-text">For you and your customers</div>
                         </div>
-                        <div class="joinSection__info">
+                        <div class="joinSection__info scrollAnimate" data-animation='bounceIn'>
                             <div class="joinSection__info-title">IT WORKS ON ALL PLATFORMS</div>
                             <div class="joinSection__info-text">IOS, Android, Windows</div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="wpsSection wrapper">
+            <div class="wpsSection wrapper">
                 <div class="wpsSection__title shadowTitle shadowTitle--left" data-name='TESTIMONIALS'>
                     <span class="bolder">WHAT</span>
                     <span>People Say</span>
@@ -198,27 +209,29 @@
                         </svg>
                     </div>
                 </div>
-            </section>
+            </div>
 
         </main>
         <footer class="footer wrapper">
-            <div class="footer__logo">
-                <a href="/" class="footer__logo-link">
-                    <img src="/assets/media/images/logo.png" alt="">
-                </a>
+            <div class="footer__row">
+                <div class="footer__logo">
+                    <a href="/" class="footer__logo-link">
+                        <img src="/assets/media/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="footer__content">
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link fdInUnderline">PRIVACY POLICY</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link fdInUnderline">TERMS & CONDITIONS</a></li>
+                        <li class="footer__menu-item"><a href="#" class="footer__menu-link fdInUnderline">SUPPORT</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info" id="contacts">
+                    <a href="mailto:info@snapfixx.com" class="footer__info-email fdInUnderline">info@snapfixx.com</a>
+                    <a href="tel:+213-4321-221" class="footer__info-phone fdInUnderline">+213-4321-221</a>
+                </div>
             </div>
-            <div class="footer__content">
-                <ul class="footer__menu">
-                    <li class="footer__menu-item"><a href="#" class="footer__menu-link fdInUnderline">PRIVACY POLICY</a></li>
-                    <li class="footer__menu-item"><a href="#" class="footer__menu-link fdInUnderline">TERMS & CONDITIONS</a></li>
-                    <li class="footer__menu-item"><a href="#" class="footer__menu-link fdInUnderline">SUPPORT</a></li>
-                </ul>
-                <div class="footer__copyright">SNAPFIXX 2016 © All Right Reserved</div>
-            </div>
-            <div class="footer__info" id="contacts">
-                <a href="mailto:info@snapfixx.com" class="footer__info-email fdInUnderline">info@snapfixx.com</a>
-                <a href="tel:+213-4321-221" class="footer__info-phone fdInUnderline">+213-4321-221</a>
-            </div>
+            <div class="footer__copyright">SNAPFIXX 2016 © All Right Reserved</div>
         </footer>
     </div>
     <!-- <script src="/assets/scripts/vendor.min.js"></script> -->
