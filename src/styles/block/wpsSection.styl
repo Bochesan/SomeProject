@@ -9,10 +9,75 @@
         text-align: center;
         margin-bottom: rel-size(50px);
 
+    &__slider
+
+        .swiper-button-prev
+        .swiper-button-next
+            background: none;
+            width: rel-size(20px);
+            height: rel-size(30px);
+
+            svg
+                width: 100%;
+                height: auto;
+                fill: #9577a7;
+                transition: fill 0.3s;
+
+            &:hover
+
+                svg
+                    fill: darken(#9577a7, 10%);
+
+    &__slider.prevSlide
+
+        .wpsSection__blockquote-text
+            animation: slideRight 2s forwards;
+
+        .wpsSection__blockquote-author
+            animation: slideRight 2s 0.5s forwards;
+
+        .swiper-slide-active
+
+            .wpsSection__blockquote-text
+                opacity: 0;
+                animation: returnLeft 2s 1.5s forwards;
+
+            .wpsSection__blockquote-author
+                opacity: 0;
+                animation: returnLeft 2s 1.8s forwards;
+
+    &__slider.nextSlide
+
+        .wpsSection__blockquote-text
+            animation: slideLeft 2s forwards;
+
+        .wpsSection__blockquote-author
+            animation: slideLeft 2s 0.5s forwards;
+
+        .swiper-slide-active
+
+            .wpsSection__blockquote-text
+                opacity: 0;
+                animation: returnRight 2s 1.5s forwards;
+
+            .wpsSection__blockquote-author
+                opacity: 0;
+                animation: returnRight 2s 1.8s forwards;
+
     &__slide
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &.swiper-slide-active
+
+            .wpsSection__blockquote-text
+                opacity: 0;
+                animation: returnRight 2s 1.5s forwards;
+
+            .wpsSection__blockquote-author
+                opacity: 0;
+                animation: returnRight 2s 1.8s forwards;
 
     &__blockquote-text
         background: #f6f6f6;
@@ -24,6 +89,7 @@
         font-family: ff-Sitka;
         font-size: rel-size(18px);
         color: #2a2a2a;
+        animation: slideLeft 2s forwards;
 
         &:before
             content: '‘‘';
@@ -37,3 +103,44 @@
             text-align: right;
             font-size: rel-size(30px);
             line-height: rel-size(30px);
+
+    &__blockquote-author
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        animation: slideLeft 2s 0.5s forwards;
+
+.author
+    display: flex;
+    align-items: center;
+
+    &__photo
+        overflow: hidden;
+        width: rel-size(50px);
+        height: @width;
+        border-radius: 50%;
+        position: relative;
+
+        img
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+    &__name
+        position: relative;
+        font-size: rel-size(18px);
+        font-family: ff-Roboto;
+        font-weight: 300;
+        padding-left: 40px;
+
+        &:before
+            content: ' ';
+            height: 1px;
+            width: 20px;
+            background: #2a2a2a;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(50%, 0);
