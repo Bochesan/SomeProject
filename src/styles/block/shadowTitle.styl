@@ -1,0 +1,22 @@
+.shadowTitle
+    position: relative;
+
+    &:before
+        content: attr(data-name);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-56%,-75%);
+        opacity: 0.1;
+        font-size: rel-size(68px);
+        line-height: rel-size(66px);
+        white-space: nowrap;
+        font-weight: 900;
+        word-spacing: 5px;
+
+    &--left
+
+        &:before
+            left: 50%;
+            transform: translate(-100%,-60%);
+            letter-spacing: 5px;

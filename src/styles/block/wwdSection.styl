@@ -11,27 +11,6 @@
         line-height: rel-size(37px);
         font-weight: 300;
 
-        &--bolder
-            font-family: ff-Roboto;
-            font-weight: 700;
-            color: #000;
-
-    &__title-inner
-        position: relative;
-
-        &:before
-            content: attr(data-name);
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-56%,-75%);
-            opacity: 0.1;
-            font-size: rel-size(66px);
-            line-height: rel-size(66px);
-            white-space: nowrap;
-            font-weight: 900;
-            word-spacing: 5px;
-
     &__slide
         position: relative;
         width: 100%;
@@ -44,15 +23,15 @@
 
             .wwdSection__slide-title
                 opacity: 0;
-                animation: returnLeft 2s 2s forwards;
+                animation: returnLeft 2s 1.5s forwards;
 
             .wwdSection__slide-text
                 opacity: 0;
-                animation: returnLeft 2s 2.3s forwards;
+                animation: returnLeft 2s 1.8s forwards;
 
             .wwdSection__slide-image
                 opacity: 0;
-                animation: returnRight 2s 2.5s forwards;
+                animation: returnRight 2s 1.5s forwards;
 
     &__slide-content
         max-width: rel-size(400px);

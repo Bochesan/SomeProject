@@ -1,0 +1,59 @@
+.serviceSection
+    padding-top: rel-size(65px);
+    padding-bottom: rel-size(65px);
+    background: #45b781;
+    display: flex;
+    justify-content: space-around;
+
+    &__link
+        position: relative;
+        padding: rel-size(25px);
+        border-radius: 15%;
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &:hover
+
+            &:before
+            &:after
+                opacity: 1;
+
+        &:before
+            content: ' ';
+            width: 100%;
+            height: 50%;
+            border: 2px dashed #fff;
+            border-bottom: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50px 50px 0 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+        &:after
+            content: ' ';
+            width: 100%;
+            height: 50%;
+            border: 2px dashed #fff;
+            border-top: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 50px 50px;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+    &__link-image
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: rel-size(30px);
+        height: rel-size(130px);
+
+    &__link-title
+        font-size: rel-size(15px);
+        color: white;
+        text-align: center;

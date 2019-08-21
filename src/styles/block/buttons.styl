@@ -34,3 +34,17 @@
             width: rel-size(18px);
             height: @width;
             background: url('/assets/media/images/downloadIcon.png') center center no-repeat;
+
+    &--join
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover
+            transform: translate(0,-3px);
+            box-shadow: 0 3px 5px #000;
+
+        &:active
+            transform: translate(0,0px);
+            box-shadow: 0 0px 0px #000;
