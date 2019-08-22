@@ -6,3 +6,7 @@ global.Headroom = Headroom;
 
 import Swiper from 'swiper';
 global.Swiper = Swiper;
+
+
+import Inputmask from 'inputmask';
+global.Inputmask = Inputmask;
