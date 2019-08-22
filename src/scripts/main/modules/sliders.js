@@ -16,6 +16,7 @@ var wpsSlider = document.querySelector('.wpsSection__slider');
 if (wpsSlider) {
     new Swiper(wpsSlider,{
       effect: 'fade',
+      allowTouchMove: false,
       fadeEffect: {
         crossFade: true
       },

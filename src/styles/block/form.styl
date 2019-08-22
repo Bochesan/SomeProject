@@ -25,7 +25,6 @@
         display: block;
         margin-bottom: rel-size(30px);
         position: relative;
-        cursor: pointer;
 
     &__input-name
         position: absolute;
@@ -38,6 +37,7 @@
         align-items: center;
         font-size: rel-size(18px);
         transition: font-size 0.3s, padding 0.3s, transform 0.3s, height 0.3s;
+        cursor: text;
 
     &__input
         display: block;
@@ -63,6 +63,7 @@
         border: 1px solid #000;
         padding: rel-size(10px);
         margin-bottom: rel-size(30px);
+        outline: none;
 
     &__submit
         display: block;
@@ -85,20 +86,23 @@
         &:active
             background: #45b781;
 
-.error
-
-    input
-        border: 1px solid #f00;
+.value
 
     .form__input-name
         transform: translate(0, -100%);
         font-size: rel-size(12px);
         height: 50%;
         padding-left: 0;
+        cursor: default;
+
+.error
+
+    .form__input
+        border: 1px solid #f00;
 
 .done
 
-    input
+    .form__input
         border: 1px solid darken(#45b781, 10%);
 
     .form__input-name
@@ -106,6 +110,7 @@
         font-size: rel-size(12px);
         height: 50%;
         padding-left: 0;
+        cursor: default;
 
 .warningMsg
     opacity: 0;
