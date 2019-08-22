@@ -1,19 +1,31 @@
 .form
     padding: rel-size(15px) 0;
+    position: relative;
+
+    &.succes
+
+        &:after
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 30%;
+            height: @width;
+            background: url('/assets/media/images/checkMark.svg') center center no-repeat;
+            background-size: contain;
+            animation: fadeIn 1s forwards;
+            opacity: 0;
+
+        .form__content
+            transition: opacity 0.1s;
+            opacity: 0;
 
     &__label
         display: block;
         margin-bottom: rel-size(30px);
         position: relative;
         cursor: pointer;
-
-        &.done
-
-            .form__input-name
-                transform: translate(0, -100%);
-                font-size: rel-size(12px);
-                height: 50%;
-                padding-left: 0;
 
     &__input-name
         position: absolute;
@@ -44,6 +56,14 @@
                 height: 50%;
                 padding-left: 0;
 
+    &__textarea
+        min-height: rel-size(100px);
+        resize: vertical;
+        width: 100%;
+        border: 1px solid #000;
+        padding: rel-size(10px);
+        margin-bottom: rel-size(30px);
+
     &__submit
         display: block;
         width: 100%;
@@ -70,10 +90,22 @@
     input
         border: 1px solid #f00;
 
+    .form__input-name
+        transform: translate(0, -100%);
+        font-size: rel-size(12px);
+        height: 50%;
+        padding-left: 0;
+
 .done
 
     input
         border: 1px solid darken(#45b781, 10%);
+
+    .form__input-name
+        transform: translate(0, -100%);
+        font-size: rel-size(12px);
+        height: 50%;
+        padding-left: 0;
 
 .warningMsg
     opacity: 0;
@@ -83,3 +115,10 @@
     top: 100%;
     left: 0;
     transition: 0.3s;
+
+@keyframes fadeIn
+    0%
+        opacity: 0;
+
+    100%
+        opacity: 1;

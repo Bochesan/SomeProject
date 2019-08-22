@@ -15,6 +15,7 @@ Form.prototype.init = function() {
         for (var i = 0; i < checkInputs.length; i++) {
             var item = checkInputs[i];
             item.checkValue();
+            item.checkEmail();
         }
         for (var i = 0; i < self._labels.length; i++) {
             var item = self._labels[i];
@@ -26,25 +27,17 @@ Form.prototype.init = function() {
         if (check) {
             self._self.classList.add('succes');
 
+            for (var i = 0; i < checkInputs.length; i++) {
+                var item = checkInputs[i];
+                item.clear();
+            }
+
             setTimeout(function() {
                 self._self.reset();
                 self._self.classList.remove('succes');
-            }, 2000)
+            }, 4000)
         }
     });
-}
-
-Form.prototype.check = function() {
-    console.log('check');
-    var self = this;
-
-    for (var i = 0; i < this._labels.length; i++) {
-        var item = this._labels[i];
-
-        if (item.classList.contains('error')) {
-            return false;
-        }
-    }
 }
 
 function CheckInput(self) {
@@ -58,18 +51,14 @@ CheckInput.prototype.init = function() {
     var self = this;
 
     this._input.addEventListener('input', function() {
+
         self._self.classList.remove('error');
         self._self.classList.remove('done');
+
         if (self._self.querySelector('.warningMsg')) {
             self._self.querySelector('.warningMsg').remove();
         }
 
-        if (this.value != '') {
-            this.classList.add('value');
-        }
-        else {
-            this.classList.remove('value');
-        }
     });
     this._input.addEventListener('focusout', function() {
         self.checkValue();
@@ -79,8 +68,10 @@ CheckInput.prototype.init = function() {
 
 CheckInput.prototype.checkValue = function() {
     var self = this;
+
     self._self.classList.remove('error');
     self._self.classList.remove('done');
+
     if (self._self.querySelector('.warningMsg')) {
         self._self.querySelector('.warningMsg').remove();
     }
@@ -124,6 +115,11 @@ CheckInput.prototype.checkEmail = function() {
             self._self.appendChild(warning);
         }
     }
+}
+
+CheckInput.prototype.clear = function() {
+    this._self.classList.remove('error');
+    this._self.classList.remove('done');
 }
 
 var checkInputs = [];
